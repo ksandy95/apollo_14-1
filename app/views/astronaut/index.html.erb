@@ -5,7 +5,14 @@
   <p>Name: <%= astronaut.name %></p>
   <p>Age: <%= astronaut.age %></p>
   <p>Job: <%= astronaut.job %></p>
+  <br>
+  <br>
+  <% astronaut.ordered_list.each do |mission| %>
+  <h2>Missions Served</h2>
+    <p><%= mission %></p>
+    <% end %>
 </section>
 <% end %>
+
 
 <p>Average Age: <%= @astronauts.average_age %></p>
