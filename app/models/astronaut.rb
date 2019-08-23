@@ -8,4 +8,14 @@ class Astronaut < ApplicationRecord
     Astronaut.average(:age)
   end
 
+  def ordered_list
+    a = self.astronaut_missions
+    b = a.map do |mission|
+          Mission.find(mission.mission_id)
+        end
+    c = b.map do |title|
+          title.title
+        end
+  end
+
 end
