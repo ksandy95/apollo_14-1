@@ -28,4 +28,9 @@ RSpec.describe "As a visitor, when i visit '/astronauts'. " do
       expect(page).to have_content("Job: Commander")
     end
   end
+  it "I see the average age of all astronauts" do
+    visit '/astronauts'
+
+    expect(page).to have_content("Average Age: 32")
+  end
 end
